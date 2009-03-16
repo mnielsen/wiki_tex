@@ -125,7 +125,7 @@ def replace_link(source):
     url = url.replace("\&","&")
     second_right_bracket = find_closing_bracket(source,right_bracket+1)
     anchor = source[right_bracket+2:second_right_bracket]
-    source = source[:current_location]+"<a href=\""+url+"\">"+anchor+"</a>"+source[second_right_bracket+1:]
+    source = source[:current_location]+"["+url+" "+anchor+"]"+source[second_right_bracket+1:]
   return source
 
 def strip_lines(string):
